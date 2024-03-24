@@ -1,50 +1,87 @@
 
-# Temperature Trend Analysis
+# Análisis de Temperatura Regional
 
-This project conducts a comprehensive analysis of temperature trends across different regions using various statistical and visualization techniques.
+## Descripción
+Este proyecto analiza las variaciones de temperatura en diferentes regiones, utilizando imágenes de ERA5-Land en formato TIFF. Convierte las temperaturas de Kelvin a Celsius, genera visualizaciones de mapas de calor georreferenciados, y produce GIFs que muestran la evolución de las temperaturas a lo largo del tiempo. Además, realiza un análisis de regresión para identificar tendencias en los datos.
+
+## Requisitos
+- Python 3
+- Bibliotecas requeridas: os, glob, rasterio, numpy, imageio, matplotlib, cartopy, pandas, scipy, PIL
+
+## Instalación
+Primero, asegúrate de tener Python 3 instalado en tu sistema. Luego, instala las dependencias necesarias utilizando pip:
+
+```
+pip install numpy pandas matplotlib scipy rasterio cartopy imageio PIL
+```
+
+## Uso
+El proyecto está estructurado en un Jupyter Notebook que incluye varios bloques de código destinados a procesar y visualizar datos de temperatura. Los pasos generales son:
+
+1. Convertir los datos de temperatura de Kelvin a Celsius.
+2. Generar mapas de calor para regiones específicas y visualizar la temperatura promedio anual.
+3. Crear series temporales de las temperaturas promedio.
+4. Fusionar imágenes de mapas y series temporales en una visualización compuesta.
+5. Realizar un análisis de regresión lineal para evaluar las tendencias de temperatura.
+
+Para ejecutar el notebook, abre una terminal, navega hasta el directorio que contiene el notebook y ejecuta:
+
+```
+jupyter notebook
+```
+
+## Contribución
+Si deseas contribuir a este proyecto, por favor considera:
+
+- Crear un fork del repositorio.
+- Realizar tus cambios en una rama nueva.
+- Enviar un pull request con tus cambios.
+
+## Acknowledgments
+
+- Gracias a los proveedores de los datasets de temperatura
+
+---
+
+
+# Regional Temperature Analysis
 
 ## Description
+This project analyzes temperature variations across different regions using ERA5-Land data in TIFF format. It converts temperatures from Kelvin to Celsius, generates georeferenced heat maps, and produces GIFs showing the evolution of temperatures over time. Furthermore, it performs a regression analysis to identify trends in the data.
 
-The code provided merges temperature data from multiple regions, analyzes trends using linear regression, and visualizes these trends over time. The goal is to identify if there's a significant warming trend in the analyzed regions.
+## Requirements
+- Python 3
+- Required libraries: os, glob, rasterio, numpy, imageio, matplotlib, cartopy, pandas, scipy, PIL
 
-## Getting Started
+## Installation
+First, ensure Python 3 is installed on your system. Then, install the necessary dependencies using pip:
 
-### Dependencies
+```
+pip install numpy pandas matplotlib scipy rasterio cartopy imageio PIL
+```
 
-- Python 3.x
-- Libraries: pandas, numpy, scipy, matplotlib
+## Usage
+The project is structured in a Jupyter Notebook that includes various code blocks designed to process and visualize temperature data. The general steps are:
 
-### Installing
+1. Convert temperature data from Kelvin to Celsius.
+2. Generate heat maps for specific regions and visualize average annual temperature.
+3. Create time series of average temperatures.
+4. Merge map and time series images into a composite visualization.
+5. Perform a linear regression analysis to assess temperature trends.
 
-- Ensure Python 3.x is installed on your system.
-- Install the required libraries using pip:
-  ```
-  pip install pandas numpy scipy matplotlib
-  ```
+To run the notebook, open a terminal, navigate to the directory containing the notebook, and execute:
 
-### Executing Program
+```
+jupyter notebook
+```
 
-1. Place your temperature data files in the known directory.
-2. Modify the file paths in the script to match your directory structure.
-3. Run the script to merge the data, perform the analysis, and visualize the results.
+## Contribution
+If you wish to contribute to this project, please consider:
 
-## Code Breakdown
-
-1. **Data Loading and Merging**: Temperature data from different regions are loaded and merged based on the date.
-
-2. **Trend Analysis**: A linear regression analysis is conducted for each region to identify temperature trends.
-
-3. **Visualization**: Trends are visualized using line plots, with the data points and regression lines indicating the trend over time.
-
-## Contributing
-
-Feel free to fork the project, make changes, and submit pull requests. Suggestions for additional analyses or improvements are welcome.
-
-## Authors
-
-- Carlos Cárdenas
+- Forking the repository.
+- Making your changes in a new branch.
+- Submitting a pull request with your changes.
 
 ## Acknowledgments
 
 - Thanks to the providers of the temperature datasets.
-- Inspiration from climate change research.
